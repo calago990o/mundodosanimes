@@ -1,0 +1,359 @@
+
+p{
+font-family: DancingScript;
+color: aliceblue;
+font-size: 25px;
+}
+*{
+margin: 0;
+padding:0;
+box-sizing:boder-box;
+
+}
+
+
+body{
+  text-align:center ;
+min-height: 100vh;
+border-color: #20242b;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+background: rgb(0,0,0);
+background: #5b7d9f;
+background: radial-gradient(circle, rgba(91,125,159,1) 0%, rgba(185,206,215,1) 11%, rgba(186,205,215,1) 44%, rgba(180,209,217,1) 49%, rgba(148,187,233,1) 100%);
+}
+
+.container{
+max-width: 1400px; 
+padding: 3%; 
+margin: auto; 
+position: relative;
+width: 100%;
+height: 100px;
+}
+
+nav{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+nav .logo{
+font-size:  35px; 
+font-style:italic ;
+color: #c900f1;
+font-weight: bold;
+}
+
+nav ul{
+list-style: none;
+}
+
+nav ul li{
+display: inline-block;
+}
+
+nav ul li a{
+padding: 10px 20px;
+text-decoration: none;
+font-size: 19px;
+color: aliceblue;
+border-radius: 30px;
+transition: 0.6s;
+}
+
+nav ul li a:hover{
+background-color: #4FC3DC;
+}
+.bubbles
+{
+position: relative;
+display: flex;
+}
+.bubbles span
+{
+    position:relative ;
+    width: 30px;
+    height: 30px;
+    background-color:#249fbb;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #192d3144,
+                0 0 50px #4FC3DC,
+                0 0 100px #4FC3DC;
+    animation:animate 15s linear infinite ;
+    animation-duration: calc(120s/ var(--i));
+ 
+}
+.bubbles span:nth-child(even)
+{
+background-color:#1e46b6 ;    
+box-shadow: 0 0 0 10px #1c78b6,
+0 0 50px #06a9ce,
+0 0 100px #4FC3DC;
+animation:animate 15s linear infinite ;
+animation-duration: calc(125s/ var(--i));
+}
+@keyframes animate 
+{
+   0%
+{
+    transform: translateY(700vh) scale(0.1);
+}
+100%
+{
+    transform: translateY(-10vh) scale(0.5);
+}
+}
+.loader {
+    --path: #06a9ce;
+    --dot: #c900f1;
+    --duration: 3s;
+    width: 44px;
+    height: 44px;
+    position: relative;
+  }
+  
+  .loader:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    background: var(--dot);
+    top: 37px;
+    left: 19px;
+    transform: translate(-18px, -18px);
+    animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  .loader svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .loader svg rect, .loader svg polygon, .loader svg circle {
+    fill: none;
+    stroke: var(--path);
+    stroke-width: 10px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+  
+  .loader svg polygon {
+    stroke-dasharray: 145 76 145 76;
+    stroke-dashoffset: 0;
+    animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  .loader svg rect {
+    stroke-dasharray: 192 64 192 64;
+    stroke-dashoffset: 0;
+    animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  .loader svg circle {
+    stroke-dasharray: 150 50 150 50;
+    stroke-dashoffset: 75;
+    animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  .loader.triangle {
+    width: 48px;
+  }
+  
+  .loader.triangle:before {
+    left: 21px;
+    transform: translate(-10px, -18px);
+    animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  @keyframes pathTriangle {
+    33% {
+      stroke-dashoffset: 74;
+    }
+  
+    66% {
+      stroke-dashoffset: 147;
+    }
+  
+    100% {
+      stroke-dashoffset: 221;
+    }
+  }
+  
+  @keyframes dotTriangle {
+    33% {
+      transform: translate(0, 0);
+    }
+  
+    66% {
+      transform: translate(10px, -18px);
+    }
+  
+    100% {
+      transform: translate(-10px, -18px);
+    }
+  }
+  
+  @keyframes pathRect {
+    25% {
+      stroke-dashoffset: 64;
+    }
+  
+    50% {
+      stroke-dashoffset: 128;
+    }
+  
+    75% {
+      stroke-dashoffset: 192;
+    }
+  
+    100% {
+      stroke-dashoffset: 256;
+    }
+  }
+  
+  @keyframes dotRect {
+    25% {
+      transform: translate(0, 0);
+    }
+  
+    50% {
+      transform: translate(18px, -18px);
+    }
+  
+    75% {
+      transform: translate(0, -36px);
+    }
+  
+    100% {
+      transform: translate(-18px, -18px);
+    }
+  }
+  
+  @keyframes pathCircle {
+    25% {
+      stroke-dashoffset: 125;
+    }
+  
+    50% {
+      stroke-dashoffset: 175;
+    }
+  
+    75% {
+      stroke-dashoffset: 225;
+    }
+  
+    100% {
+      stroke-dashoffset: 275;
+    }
+  }
+  
+  .loader {
+    display: inline-block;
+    margin: 0 16px;
+  }
+
+  * {box-sizing:border-box}
+
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+background-color: #c900f1;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  .cssFont_1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: oblique;
+    font-variant: normal;
+    text-transform: none;
+    }
+
